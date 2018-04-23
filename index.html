@@ -62,6 +62,15 @@
         var button = document.getElementById('button');
         var output = document.getElementById('output');
 
+        //takes value of whatever in input and sends it via contract
+        button.addEventListener('click', function () {
+            //set the input
+            foo.setFoo(input.value);
+
+            //display the output
+            output.innerHTML = foo.getFoo();
+        });
+
 
     </script>
 </body>
