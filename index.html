@@ -12,7 +12,7 @@
 <body>
     <script>
         var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-        web.eth.defaultAccount = web3.eth.accounts[0];
+        web3.eth.defaultAccount = web3.eth.accounts[0];
         //ABI (application binary interface   -  JSON representation of the contract)
         // console.log(web3);
 
@@ -46,6 +46,11 @@
                 "type": "function"
             }
         ])
+
+        //creates instance of contract to work with
+        var foo = fooContract.at('0x9064db0b5fbfa0d3ac0102330e7c6453e5d0dbec');
+        //to get all the methods that live inside of contract
+        console.log(foo);
 
     </script>
 </body>
