@@ -13,9 +13,40 @@
     <script>
         var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
         web.eth.defaultAccount = web3.eth.accounts[0];
-
-
+        //ABI (application binary interface   -  JSON representation of the contract)
         // console.log(web3);
+
+        var fooContract = web3.eth.contract([
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_foo",
+                        "type": "bytes32"
+                    }
+                ],
+                "name": "setFoo",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getFoo",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "bytes32"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ])
+
     </script>
 </body>
 
