@@ -70,7 +70,9 @@
             foo.setFoo(input.value);
 
             //display the output
-            output.innerHTML = foo.setFoo(input.value); //for whatever reason, getFoo is not rendering the hex that setFoo generates...
+            //for whatever reason, getFoo is not rendering the hex that setFoo generates...
+            //this next line should be output.innerHTML = foo.getFoo();
+            output.innerHTML = foo.setFoo(input.value);
         });
 
 
