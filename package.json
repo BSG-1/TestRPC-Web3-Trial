@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/BSG-1/TestRPC-Web3-Trial#readme",
   "dependencies": {
-    "web3": "github:ethereum/web3.js"
+    "web3": "^0.19.1"
   }
 }

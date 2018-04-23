@@ -13,7 +13,9 @@
     <input id='input' type="text">
     <button id='button'>Set</button>
 
-    <pre id='output'></pre>
+    <pre id='output'>
+
+    </pre>
 
     <script>
         var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
@@ -50,7 +52,7 @@
                 "stateMutability": "view",
                 "type": "function"
             }
-        ])
+        ]);
 
         //creates instance of contract to work with
         var foo = fooContract.at('0x9064db0b5fbfa0d3ac0102330e7c6453e5d0dbec');
@@ -68,7 +70,7 @@
             foo.setFoo(input.value);
 
             //display the output
-            output.innerHTML = foo.getFoo();
+            output.innerHTML = foo.setFoo(input.value); //for whatever reason, getFoo is not rendering the hex that setFoo generates...
         });
 
 
